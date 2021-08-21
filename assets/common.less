@@ -1,0 +1,47 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: calc(100% - 24px);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  &-form {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 15px 0;
+    &-handle {
+      display: flex;
+      justify-content: flex-start;
+    }
+    &-search {
+      display: flex;
+      justify-content: flex-end;
+      .search-btn {
+        margin-left: 15px;
+      }
+    }
+    .el-form-item {
+      margin-bottom: 0;
+    }
+  }
+  &-table {
+    flex: 1;
+    height: 100%;
+    overflow: auto;
+  }
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.3s linear;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
